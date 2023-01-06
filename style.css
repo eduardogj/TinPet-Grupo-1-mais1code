@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
+
+/* All */
+body {
+    height: 100%;
+    background-color: #fce5e5 !important;
+}
+
+.content {
+    padding-bottom: 100px;
+}
+
+* {
+    margin: 0;
+    font-family: Poppins;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 1.5rem;
+}
+
+.alignCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchImg {
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-weight: 900;
+    color: #FF7777;
+}
+
+/*Navbar*/
+
+.navigationBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 90px;
+    border-top: 1px solid #333;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.navigationBar .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+}
+
+.flexBasisSmall {
+    flex-basis: 17.5%;
+}
+
+.flexBasisLarge {
+    flex-basis: 30%;
+}
+
+.navigationBar a {
+    text-decoration: none;
+}
+
+/* Navigation */
+
+.searchBox {
+    overflow: hidden;
+    height: 100%;
+    background-color: #FFF;
+    padding: 5px;
+}
+
+.searchBar {
+    border-style: none;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 15px;
+}
+
+.animalLinks {
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.petEmblem {
+    cursor:pointer;
+}
+
+.petEmblem figure {
+    width: 100px;
+}
+
+.petEmblem img {
+    width: 70px;
+    height: 70px;
+    background-color: #3579F8;
+    position: relative;
+    border-radius: 50%;
+}
+
+/*Cards*/
+
+/*Near and Recent*/
+
+.nearBox {
+    margin-top: 20px;
+}
+
+.animalContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 130px;
+    margin: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.card img {
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    height: 120px;
+}
+
+.cardInfo {
+    padding: 12px;
+    font-size: .8rem;
+}
+
+/*CTA*/
+.cta {
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*Footer*/
+footer {
+    margin-top: 20%;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    border-top: .5px solid #333;
+    
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+footer li a {
+    text-decoration: none;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerWrapper figure {
+    text-align: center;
+}
+
+.footerMsg {
+    text-align: center;
+    margin-top: 20px;
+    font-size: .8rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .mobile-box {
+        max-width: 767px;
+        margin: 0 auto;
+    }
+
+    body {
+        background-color: #333 !important;
+    }
+    
+    .content {
+        background-color: #fce5e5;
+        padding-bottom: 0;
+    }
+
+    .footerMsg {
+        margin-bottom: 12px;
+    }
+
+    .navigationBar {
+        position: sticky;
+    }
+
+    .cta {
+        margin: 20px auto;
+        width: 70%;
+    }
+
+}
