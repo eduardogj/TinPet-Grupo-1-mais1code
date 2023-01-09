@@ -5,6 +5,10 @@ const closePet = document.getElementById("closeBtnPet");
 const card = document.querySelectorAll(".card").length;
 const displayPet = document.getElementById("displayPet");
 
+function scrollToTop() {
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+  }
+
 loginIcon.addEventListener("click", function(){
     loginBox.classList.remove("hide");
 });
@@ -14,9 +18,11 @@ closeBtn.addEventListener("click", function(){
 });
 
 for (let i = 0; i < card; i++) {
+
     // Pega a imagem do card
     document.querySelectorAll(".card")[i].addEventListener("click", function(){
 
+        window.scroll({top: 0, left: 0, behavior: 'smooth'});
         displayPet.classList.remove("hide");
  
         var displayImg = this.querySelectorAll("img")[0].src;
@@ -27,6 +33,7 @@ for (let i = 0; i < card; i++) {
         document.getElementById("fotoPet").setAttribute("src", displayImg);
         document.getElementById("nomePet").innerText = displayName;
     });
+
 };
 
 closePet.addEventListener("click", function(){
