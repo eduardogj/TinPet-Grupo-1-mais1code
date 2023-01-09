@@ -7,6 +7,7 @@ body {
 }
 
 .content {
+    position: relative;
     padding-bottom: 100px;
 }
 
@@ -61,6 +62,123 @@ body {
     padding-left: 5px;
 }
 
+.loginIcon {
+    cursor: pointer;
+}
+
+/* end of Header */
+
+/* Login */
+.login-box {
+    height: 400x;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.closeLogin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px 15px 0 0;
+    color: #fff;
+}
+
+.login-box form {
+    height: 100%;
+    width: 100%;
+    padding: 50px 35px;
+    background-color: #FF7777;
+}
+
+.login-box form * {
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.login-box h2 {
+    text-align: center;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 30px;
+}
+
+.login-box input {
+    display: block;
+    height: 35px;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 3px;
+    color: black;
+    padding: 10px 0 10px 5px;
+
+}
+
+.login-box button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box .social {
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialBtn,
+.fa-x {
+    cursor: pointer;
+}
+
+.login-box .social div {
+    background: red;
+    width: 150px;
+    border-radius: 3px;
+    padding: 10px 10px 10px 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: #eaf0fb;
+    text-align: center;
+}
+
+.login-box .social div:hover {
+    background-color: rgba(255, 255, 255, 0.47);
+}
+
+.login-box .social .fb {
+    margin-left: 25px;
+}
+
+.login-box .social i {
+    margin-right: 4px;
+}
+
+.fa-brands,
+.fab {
+    font-family: "Font Awesome 6 Brands" !important;
+}
+
+
 /*Navbar*/
 
 .navigationBar {
@@ -100,6 +218,7 @@ body {
     height: 100%;
     background-color: #FFF;
     padding: 5px;
+    border-radius: 12px;
 }
 
 .searchBar {
@@ -115,10 +234,11 @@ body {
     margin-top: 15px;
     padding: 15px;
     background-color: #fff;
+    border-radius: 12px;
 }
 
 .petEmblem {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .petEmblem figure {
@@ -156,7 +276,7 @@ body {
     cursor: pointer;
 }
 
-.card img {
+.card-img img {
     border-radius: 12px 12px 0 0;
     width: 100%;
     height: 120px;
@@ -182,7 +302,7 @@ footer {
     padding-top: 10px;
     font-size: 1.2rem;
     border-top: .5px solid #333;
-    
+
 }
 
 footer ul {
@@ -214,6 +334,99 @@ footer li a {
     font-size: .8rem;
 }
 
+/* Pet page */
+.displayPet {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin-top: 10%;
+    background-color: #fff;
+    transition: opacity .2s linear;
+}
+
+.closePet {
+    position: absolute;
+    top: 0;
+    color: black;
+    font-size: 1.6rem;
+    transform: translate(150%, 150%);
+    background-color: #fff;
+    line-height: 90%;
+    padding: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.petImg {
+    height: 250px;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.petImg img {
+    width: 100%;
+}
+
+.petInfo {
+    margin-top: 25px;
+    border-radius: 25px 25px 0 0 ;
+}
+
+.petText {
+    margin-top: 15px;
+}
+
+.petCta {
+    margin: 25px 0;
+}
+
+.petAttributes {
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-around;
+}
+
+.attribute {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/logoRotated.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.attribute1 {
+    background-color: #BED2F8;
+}
+
+.attribute2 {
+    background-color: #CBE5DA;
+}
+
+.attribute3 {
+    background-color: #ECD1CF;
+}
+
+.petCta {
+    text-align: center;
+}
+
+.petCta button {
+    width: 70%;
+    height: 40px;
+    border-radius: 12px;
+    border-style: none;
+    background-color: #3579F8;
+    color: #fff;
+    cursor: pointer;
+}
+
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
@@ -225,7 +438,7 @@ footer li a {
     body {
         background-color: #333 !important;
     }
-    
+
     .content {
         background-color: #fce5e5;
         padding-bottom: 0;
@@ -244,4 +457,11 @@ footer li a {
         width: 70%;
     }
 
+    .displayPet {
+        margin-left: 20%;
+        width: 60%;
+    }
+
 }
+
+

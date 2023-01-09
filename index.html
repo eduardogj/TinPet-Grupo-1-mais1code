@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinPet</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e448970ef7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,9 +23,37 @@
                         <h1>TinPet</h1>
                         <img src="images/logo.svg" alt="">
                     </div>
-                    <a href="" class="loginIcon">
+
+                    <div class="loginIcon" id="loginIcon">
                         <img src="images/userIco.svg" alt="">
-                    </a>
+                    </div>
+
+                    <!-- Login window -->
+                    <div class="login-box hide" id="loginBox">
+                        <i class="fa-solid fa-x closeLogin" id="closeBtn"></i>
+                        <form>
+                            <div class="logo">
+                                <h1>TinPet</h1>
+                            </div>
+
+                            <label for="username">Usuário</label>
+                            <input type="text" placeholder="exemplo@exemplo.com" id="username">
+
+                            <label for="password">Senha</label>
+                            <input type="password" placeholder="Digite sua senha" id="password">
+
+                            <button>Entrar</button>
+
+                            <div class="social">
+                                <div class="socialBtn google"><i class="fab fa-google"></i> Google</div>
+                                <div class="socialBtn facebook"><i class="fa-brands fa-facebook"></i> Facebook</i></div>
+                            </div>
+
+                            <a href="">Esqueceu sua senha?</a>
+                        </form>
+                    </div>
+
+
                 </div>
             </nav>
             <!-- End of Header -->
@@ -55,14 +84,14 @@
             <!-- Animais perto -->
             <div class="container nearBox">
                 <div class="spaceBetween">
-                    <h4>Mais próximosde você</h4>
+                    <h4>Mais próximos de você</h4>
                     <a href="">Ver todos</a>
                 </div>
                 <div class="animalContainer">
                     <!-- card1 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card1.jpg" alt="">
+                            <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Edgar</h3>
@@ -72,7 +101,7 @@
                     <!-- card2 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card2.jpg" alt="">
+                            <img src="https://media.istockphoto.com/id/185094249/photo/little-fat-pug-sitting-on-sidewalk-in-summer-park.jpg?s=612x612&w=0&k=20&c=vfvypCBLX7OrPFEM58QLGBd9cuhTEN0SET55z3P31Wo=" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Faustão</h3>
@@ -82,7 +111,7 @@
                     <!-- card3 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card3.jpg" alt="">
+                            <img src="https://www.thesprucepets.com/thmb/jOStEfombpEXk8z1Y227_iUEtcg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-866199876-d3dc392bfedd470590cf08bedc095a6f.jpg" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Anatólia</h3>
@@ -92,7 +121,7 @@
                     <!-- card4 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card4.jpg" alt="">
+                            <img src="https://www.thesprucepets.com/thmb/kiEmy6YZwxGjsv0tYweF1rDRXWM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1163331995-f5226107e4794ed5b334c23215ed28db.jpg" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Pretinha</h3>
@@ -113,7 +142,7 @@
                     <!-- card5 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card5.jpg" alt="">
+                            <img src="https://quantocustaviajar.com/blog/wp-content/uploads/2022/03/cat-scaled.jpg" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Tobias</h3>
@@ -123,7 +152,7 @@
                     <!-- card6 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card6.jpg" alt="">
+                            <img src="https://www.petz.com.br/blog/wp-content/uploads/2020/08/cat-sitter-felino-1280x720.jpg" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Juju</h3>
@@ -133,7 +162,7 @@
                     <!-- card7 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card7.jpg" alt="">
+                            <img src="https://i0.statig.com.br/bancodeimagens/2f/ym/i8/2fymi85z5vo5pcl5rsnsr3xgi.jpg" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Charles</h3>
@@ -143,7 +172,7 @@
                     <!-- card8 -->
                     <div class="card">
                         <div class="card-img">
-                            <img src="images/card8.jpg" alt="">
+                            <img src="https://cdn.thewirecutter.com/wp-content/uploads/2018/04/catbeds-lowres-05926.jpg?auto=webp&quality=60&width=570" alt="">
                         </div>
                         <div class="cardInfo">
                             <h3>Kim</h3>
@@ -156,10 +185,10 @@
 
             <!-- CTA -->
             <div class="container">
-                    <div class="cta spaceBetween">
-                        <img src="images/search.svg" class="searchImg" alt="" />
-                        <p>Procurar um protetor idependente</p>
-                    </div>
+                <div class="cta spaceBetween">
+                    <img src="images/search.svg" class="searchImg" alt="" />
+                    <p>Procurar um protetor idependente</p>
+                </div>
             </div>
             <!-- End of CTA -->
 
@@ -223,8 +252,36 @@
                 </div>
             </div>
             <!-- End of Navbar -->
+
+            <div class="displayPet hide" id="displayPet">
+                <p class="closePet" id="closeBtnPet"> < </p>
+                <div class="container">
+                    <div class="petImg">
+                        <img id="fotoPet" src="https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg" alt="">
+                    </div>
+                    <div class="petInfo sdw">
+                        <div class="petName">
+                            <h3 id="nomePet"></h3>
+                            <p id="localPet">Local</p>
+                            <div class="petAttributes">
+                                <div class="attribute attribute1">Idade</div>
+                                <div class="attribute attribute2">Gênero</div>
+                                <div class="attribute attribute3">Porte</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="petText">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque laborum corporis vel praesentium perspiciatis cumque veniam enim quisquam expedita repellat suscipit doloribus eos tenetur recusandae reiciendis, non, quasi nulla labore?</p>
+                    </div>
+                    <div class="petCta">
+                        <button>ENTRE EM CONTATO</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
     <script src="app.js"></script>
 </body>
