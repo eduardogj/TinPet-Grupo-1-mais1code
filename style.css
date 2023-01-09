@@ -407,7 +407,7 @@ footer li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/logoRotated.svg");
+    background-image: url("images/logoRotated.svg");
     background-repeat: no-repeat;
     background-position: bottom right;
 }
